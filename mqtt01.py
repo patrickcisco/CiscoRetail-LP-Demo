@@ -40,9 +40,8 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     data = msg.payload.decode("utf-8","ignore")
     info = json.loads(data)
-    timestamp = str(info["ts"]).split('.')[0] + str(random_with_N_digits(3))
+    timestamp = str(info["timestamp"]).split('.')[0] + str(random_with_N_digits(3))
     link = c.MERAKI_MV_LINK + timestamp
-    # webbrowser.open(c.MERAKI_MV_LINK + timestamp, new=0)
     driver.get(link)
     
 client = mqtt.Client(client_id='{}-{}'.format(platform.system(), random_with_N_digits(25)))
