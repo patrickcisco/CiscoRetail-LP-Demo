@@ -20,7 +20,7 @@ for i in range(5000):
     payload = json.dumps(msg)
     print(payload)
     client.publish(c.MQTT_TOPIC, payload)
-    time.sleep(15)
+    time.sleep(20)
 
 
 client = mqtt.Client()
