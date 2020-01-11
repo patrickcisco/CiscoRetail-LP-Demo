@@ -46,6 +46,7 @@ def on_message(client, userdata, msg):
     timestamp = str(info["timestamp"]).split('.')[0] + str(random_with_N_digits(3))
     link = c.MERAKI_MV_LINK + timestamp
     api.messages.create(c.LP_ROOM_ID, text=c.LP_TEXT + link)
+    requests.get(c.CISCO_VISION_DMP_URL)
 
     
 client = mqtt.Client(client_id='{}-{}'.format(platform.system(), random_with_N_digits(25)))

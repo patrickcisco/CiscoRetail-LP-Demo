@@ -11,7 +11,7 @@ def on_connect(client, userdata, flags, rc):
 
 client = mqtt.Client()
 client.connect(c.MQTT_BROKER, c.MQTT_BROKER_PORT, 60)
-for i in range(5000):
+for i in range(1):
     msg = {
         "timestamp": "1578775363",
         "id": "303401B5F005A74004F014B6",
