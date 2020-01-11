@@ -1,2 +1,11 @@
-paho-mqtt
-requests
+certifi==2019.11.28
+chardet==3.0.4
+future==0.18.2
+idna==2.8
+paho-mqtt==1.5.0
+PyJWT==1.7.1
+requests==2.22.0
+requests-toolbelt==0.9.1
+selenium==3.141.0
+urllib3==1.25.7
+webexteamssdk==1.2
